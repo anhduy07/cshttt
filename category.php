@@ -11,30 +11,32 @@ if($category_id == null || $category_id == '') {
 
 $lastestItems = executeResult($sql);
 ?>
+
+
 <div class="container" style="margin-top: 120px; margin-bottom: 20px; ">
-	<!-- <div class="row">
-	<div class="col-md-2">
+	<div class="row">
+	<!-- <div class="col-md-2">
 	<div class="sidebar-container ">
   <div class="sidebar-logo">
     Shoe shop
   </div>
-  <ul class="sidebar-navigation"> -->
+  <ul class="sidebar-navigation">
 	  
 	  <?php
 	  	// foreach($menuItems as $item) {
 	  	// 	echo '<div >
 		// 		    <a href="category.php?id='.$item['id'].'">'.$item['name'].'</a>
 		// 		</div>';
-	  	//}
+	  	// }
 	  ?>
 	  
-<!--    
+   
   </ul>
 </div>
-</div> -->
+</div>  -->
 
-<!-- <div class="col-md-9"> -->
-	<div class="row">
+ <!-- <div class="col-md-10">
+	<div class="row"> -->
 	<?php
 		foreach($lastestItems as $item) {
 			echo '<div class="col-md-3 col-6 product-item">
@@ -46,10 +48,10 @@ $lastestItems = executeResult($sql);
 				</div>';
 		}
 	?>
-	</div>
-<!-- </div> -->
+	<!-- </div>
+ </div>  -->
 
-	
+</div>	
 </div>
 <?php
 require_once('layouts/footer.php');

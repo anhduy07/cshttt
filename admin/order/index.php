@@ -23,7 +23,7 @@
 					<th>Nội Dung</th>
 					<th>Tổng Tiền</th>
 					<th>Ngày Tạo</th>
-					<!-- <th style="width: 120px"></th> -->
+					<th style="width: 120px"></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -37,20 +37,19 @@
 					<td><a href="detail.php?id='.$item['id'].'">'.$item['email'].'</a></td>
 					<td>'.$item['address'].'</td>
 					<td>'.$item['note'].'</td>
-					
-					<td>'.number_format($item['total_money']).' VNĐ</td>
-					<td>'.$item['order_date'].'</td>     ';
-		// 			<td style="width: 50px">';
-		// if($item['status'] == 0) {
-		// 	echo '<button onclick="changeStatus('.$item['id'].', 1)" class="btn btn-sm btn-success" style="margin-bottom: 10px;">Approve</button>
-		// 	<button onclick="changeStatus('.$item['id'].', 2)" class="btn btn-sm btn-danger">Cancel</button>';
-		// } else if($item['status'] == 1) {
-		// 	echo '<label class="badge badge-success">Approved</label>';
-		// } else {
-		// 	echo '<label class="badge badge-danger">Cancel</label>';
-		// }
-		// echo '</td>
-		// 		</tr>';
+					<td>'.$item['total_money'].'</td>
+					<td>'.$item['order_date'].'</td>
+					<td style="width: 50px">';
+		if($item['status'] == 0) {
+			echo '<button onclick="changeStatus('.$item['id'].', 1)" class="btn btn-sm btn-success" style="margin-bottom: 10px;">Approve</button>
+			<button onclick="changeStatus('.$item['id'].', 2)" class="btn btn-sm btn-danger">Cancel</button>';
+		} else if($item['status'] == 1) {
+			echo '<label class="badge badge-success">Approved</label>';
+		} else {
+			echo '<label class="badge badge-danger">Cancel</label>';
+		}
+		echo '</td>
+				</tr>';
 	}
 ?>
 			</tbody>

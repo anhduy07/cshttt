@@ -2,7 +2,7 @@
 	$title = 'Quản Lý Phản Hồi';
 	$baseUrl = '../';
 	require_once('../layouts/header.php');
-//   sắp xếp orerby theo status, sắp xếp theo thứ tự tăng dần asc, updated_at desc: tạo ra sau thì đọc trc
+
 	$sql = "select * from Feedback order by status asc, updated_at desc";
 	$data = executeResult($sql);
 ?>
@@ -22,7 +22,7 @@
 					<th>Chủ Đề</th>
 					<th>Nội Dung</th>
 					<th>Ngày Tạo</th>
-					<!-- <th style="width: 120px"></th> -->
+					<th style="width: 120px"></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -37,20 +37,20 @@
 					<td>'.$item['email'].'</td>
 					<td>'.$item['subject_name'].'</td>
 					<td>'.$item['note'].'</td>
-					<td>'.$item['updated_at'].'</td>';
-		 			// <td style="width: 50px">';
-				// if($item['status'] == 0) {
-					// 	echo '<button onclick="markRead('.$item['id'].')" class="btn btn-danger">Đã Đọc</button>';
-					// }	
-					// echo '</td>
-					// 		</tr>';
+					<td>'.$item['updated_at'].'</td>
+					<td style="width: 50px">';
+		if($item['status'] == 0) {
+			echo '<button onclick="markRead('.$item['id'].')" class="btn btn-danger">Đã Đọc</button>';
+		}	
+		echo '</td>
+				</tr>';
 	}
 ?>
 			</tbody>
 		</table>
 	</div>
 </div>
-<!-- 
+
 <script type="text/javascript">
 	function markRead(id) {
 		$.post('form_api.php', {
@@ -60,9 +60,7 @@
 			location.reload()
 		})
 	}
-</script> -->
-
-
+</script>
 <?php
 	require_once('../layouts/footer.php');
 ?>

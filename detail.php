@@ -66,6 +66,34 @@ $lastestItems = executeResult($sql);
 			<p style="font-size: 15px; color: grey; margin-top: 15px; margin-bottom: 15px;">
 				<del><?=number_format($product['price'])?> VND</del>
 			</p>
+			<h5>Chọn Size: </h5>
+			<!-- <div style="display: flex;">
+				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px;" onclick="addMoreCart(-1)">-</button>
+				<input type="number" name="num" class="form-control" step="1" value="1" style="max-width: 90px;border: solid #e0dede 1px; border-radius: 0px;" onchange="fixCartNum()">
+				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px;" onclick="addMoreCart(1)">+</button>
+			</div> -->
+			<div class="form-group" style="border: solid #e0dede 1px; border-radius: 5px; width: 157px;">
+					  <select class="form-control" name="" id="" required="true">
+						  <option value="">35</option>
+						  <option value="">36</option>
+						  <option value="">37</option>
+						  <option value="">38</option>
+						  <option value="">39</option>
+						  <option value="">40</option>
+						  <option value="">41</option>
+						  <option value="">42</option>
+						  <option value="">43</option>
+					  	<?php
+					  		// foreach($roleItems as $role) {
+					  		// 	if($role['id'] == $role_id) {
+					  		// 		echo '<option selected value="'.$role['id'].'">'.$role['name'].'</option>';
+					  		// 	} else {
+					  		// 		echo '<option value="'.$role['id'].'">'.$role['name'].'</option>';
+					  		// 	}
+					  		// }
+					  	?>
+					  </select>
+					</div>
 			<h5>Chọn số lượng: </h5>
 			<div style="display: flex;">
 				<button class="btn btn-light" style="border: solid #e0dede 1px; border-radius: 0px;" onclick="addMoreCart(-1)">-</button>
